@@ -49,6 +49,7 @@ chmod +x clipboard-image-auto-save.sh
 - It checks clipboard images repeatedly
 - Saves only when image content changed (prevents duplicate files)
 - Saves to `~/Downloads/clipboard_YYYYMMDD_HHMMSS.png`
+- Adds screenshot metadata so the file can appear in Raycast "Search Screenshots"
 
 ### Enable with launchd
 
