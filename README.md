@@ -1,6 +1,8 @@
 # raycast-save-clipboard-image
 
-A Raycast script that saves a clipboard image to your Downloads folder and copies the file path to your clipboard.
+A script set for clipboard images:
+- `clipboard-image-save.sh` (manual from Raycast)
+- `clipboard-image-auto-save.sh` (automatic via launchd)
 
 This repository also includes an auto-save script for Universal Clipboard workflows (iPhone/iPad -> Mac).
 
@@ -50,6 +52,10 @@ chmod +x clipboard-image-auto-save.sh
 - Saves only when image content changed (prevents duplicate files)
 - Saves to `~/Downloads/clipboard_YYYYMMDD_HHMMSS.png`
 - Adds screenshot metadata so the file can appear in Raycast "Search Screenshots"
+- Saves all clipboard images (macOS cannot detect which device sent the image)
+
+Note:
+- If another app (for example screenshot tools) already saves images, auto-save can create additional files.
 
 ### Enable with launchd
 
