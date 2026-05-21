@@ -6,8 +6,10 @@
 # @raycast.icon 🖼️
 # @raycast.packageName Clipboard
 
+SAVE_DIR="$HOME/00_Home_Local/ScreenShots"
+mkdir -p "$SAVE_DIR"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-SAVE_PATH="$HOME/Downloads/clipboard_${TIMESTAMP}.png"
+SAVE_PATH="$SAVE_DIR/clipboard_${TIMESTAMP}.png"
 
 /opt/homebrew/bin/pngpaste "$SAVE_PATH"
 
