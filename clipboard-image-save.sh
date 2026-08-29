@@ -6,7 +6,10 @@
 # @raycast.icon 🖼️
 # @raycast.packageName Clipboard
 
-SAVE_DIR="$HOME/Pictures/ClipboardImages"
+# Local overrides (not tracked) may set CLIPBOARD_SAVE_DIR
+[ -f "$(dirname "$0")/.env" ] && . "$(dirname "$0")/.env"
+
+SAVE_DIR="${CLIPBOARD_SAVE_DIR:-$HOME/Pictures/ClipboardImages}"
 mkdir -p "$SAVE_DIR"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 SAVE_PATH="$SAVE_DIR/clipboard_${TIMESTAMP}.png"

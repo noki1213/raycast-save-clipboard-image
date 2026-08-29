@@ -8,9 +8,16 @@ This repository also includes an auto-save script for Universal Clipboard workfl
 
 ## What it does
 
-1. Saves the image currently in your clipboard as a PNG file to `~/Downloads/`
+1. Saves the image currently in your clipboard as a PNG file to `~/Pictures/ClipboardImages/`
 2. The filename includes a timestamp (e.g. `clipboard_20260430_143022.png`)
 3. Copies the full file path to your clipboard automatically
+
+To save somewhere else, set `CLIPBOARD_SAVE_DIR` in the environment, or create a
+`.env` file next to the script:
+
+```sh
+CLIPBOARD_SAVE_DIR="$HOME/Pictures/Screenshots"
+```
 
 ## Requirements
 
